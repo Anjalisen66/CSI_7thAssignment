@@ -21,10 +21,15 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    
+    category_img: {
+        type: String,
+        required: true
+    }
     
 
 });
+
+productSchema.index({ name: 'text', description: 'text' });
 
 const Product = mongoose.model('Product', productSchema);
 

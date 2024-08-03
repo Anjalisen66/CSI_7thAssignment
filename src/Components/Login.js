@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import './Login.css'
 
 const LoginForm = ({switchToSignUp}) => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission, e.g., call an API
-    if (username === 'admin' && password === 'password') {
+    if (email === 'admin' && password === 'password') {
       alert('Login successful');
     } else {
       setError('Invalid username or password');
@@ -22,12 +22,12 @@ const LoginForm = ({switchToSignUp}) => {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className='field-1'>
-          <label htmlFor="username">Username:</label>
+          <label htmlFor="email">Email:</label>
           <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div  className='field-1'>

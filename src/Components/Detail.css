@@ -3,22 +3,19 @@ body{
 }
 
 .Main-card{
-    height: 400px;
-    width: 250px;
+ 
     border: 1px solid red;
+    display: flex;
 }
 .content{
-    height: 300px;
-    width: 240px;
+    /* height: 400px; */
+    width: 250px;
     border: 1px solid rgb(8, 5, 5);
-
+    /* position: relative; */
 }
 .content img{
-    height: 100px;
-    width: 100px;
+    height: 250px;
+    width: 250px;
     border: 1px solid red;
-    
-}
-h2{
     
 }
